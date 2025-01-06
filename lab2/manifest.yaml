@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: itdt-frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: itdt-frontend
+  template:
+    metadata:
+      labels:
+        app: itdt-frontend
+    spec:
+      containers:
+        - name: frontend
+          image: ifilyaninitmo/itdt-contained-frontend:master
+          ports:
+            - containerPort: 3000
+          env:
+            - name: REACT_APP_USERNAME
+              value: "ponomarev_k_d"
+            - name: REACT_APP_COMPANY_NAME
+              value: "ponomarev_k_d_company"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: itdt-frontend-service
+spec:
+  selector:
+    app: itdt-frontend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+      nodePort: 30080 
+  type: NodePort
