@@ -14,4 +14,4 @@
 4. ![image](https://github.com/user-attachments/assets/368ba594-99fc-4976-a602-7754d27080be)
 5. Getting token from logs: *minikube kubectl logs vault*
 6. ![image](https://github.com/user-attachments/assets/a5dcefad-8da7-4df5-b7cd-0d98514c597c)
-7. ![image](https://github.com/user-attachments/assets/1bcbb62d-2fc9-46d9-8d7a-4f9bfd520e03)
+7. ![k8s drawio](https://github.com/user-attachments/assets/70018963-d817-4bca-8dc1-d2c910152ba9)
