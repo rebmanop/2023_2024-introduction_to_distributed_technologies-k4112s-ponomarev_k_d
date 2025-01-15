@@ -32,6 +32,7 @@ kubectl label node multinode rack=0
 kubectl label node multinode-m02 rack=1
 ```
 ### 4. Применяем написанный для пулов манифест
+![image](https://github.com/user-attachments/assets/2bb62756-4a65-4897-8c67-4f1169dbf221)
 
 ```
 kubectl-calico apply -f ippool.yaml --allow-version-mismatch
